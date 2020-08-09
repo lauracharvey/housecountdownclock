@@ -555,3 +555,18 @@ span {
     padding-top: 20px;
     font-family: 'Staatliches', cursive;
 }
+
+@media only screen and (max-width: 600px) {
+    .clock {
+        width: 375px;
+    }
+
+    .days, .hours, .minutes {
+        width: 15%;
+    }
+
+    .labels {
+        width: 15%;
+        font-size: 14px;
+    }
+}
