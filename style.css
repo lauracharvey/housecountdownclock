@@ -14,6 +14,41 @@
     justify-content: center;
     overflow-y: hidden;
     background: linear-gradient(white, rgb(158, 189, 214));
+    animation: sky 60s 2s forwards;
+}
+
+@keyframes sky{
+    10%{
+        background: linear-gradient(0deg, rgba(158,189,214,1) 64%, rgba(253,187,45,1) 100%);
+    }
+    20%{
+        background: linear-gradient(0deg, rgba(158,189,214,1) 30%, rgba(253,187,45,1) 100%);
+    }
+    30%{
+        background: linear-gradient(0deg, rgba(158,189,214,1) 0%, rgba(253,187,45,1) 100%);
+    }
+    40%{
+        background: linear-gradient(0deg, rgba(253,187,45,1) 37%, rgba(255,111,18,1) 100%);
+    }
+
+    50%{
+        background: linear-gradient(180deg, rgba(253,29,29,0.9696969696969697) 5%, rgba(255,111,18,0.9276094276094276) 62%, rgba(251,226,0,1) 100%); 
+    }
+    60% {
+        background: linear-gradient(180deg, rgba(165,29,253,0.9696969696969697) 5%, rgba(253,29,29,1) 84%, rgba(255,111,18,1) 100%);
+    }
+    70% {
+        background: linear-gradient(180deg, rgba(59,0,168,1) 24%, rgba(165,29,253,1) 62%, rgba(253,29,29,1) 87%);
+    }
+    80% {
+        background: linear-gradient(180deg, rgba(34,0,94,1) 29%, rgba(59,0,168,1) 57%, rgba(115,18,177,1) 87%);
+    }
+    90%{
+        background: linear-gradient(180deg, rgba(15,0,42,1) 28%, rgba(34,0,94,1) 62%, rgba(59,0,168,1) 79%);
+    }
+    100%{
+        background: linear-gradient(180deg, rgba(15,0,42,1) 40%, rgba(34,0,94,1) 81%, rgba(59,0,168,1) 95%);
+    }
 }
 
 .house-wrap {
@@ -26,6 +61,8 @@
 
 .clock-wrap {
     width: 500px;
+    left: 0;
+    bottom: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -33,6 +70,13 @@
     height: 220px;
     background: #1b2022;
     border-radius: 10px;
+    animation: changeclock 20s 50s forwards;
+}
+
+@keyframes changeclock {
+    100%{
+        background: none;
+    }
 }
 
 .left-side {
@@ -245,12 +289,44 @@
 .sunshine {
     z-index: 4;
     position: absolute;
-    width: 65px;
-    height: 65px;
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
     background: #FAAF23;
     box-shadow: 0px 1px 2px 5px #FAAF23;
     right: -30px;
+    animation: sunset 45s forwards;
+}
+
+@keyframes 
+
+sunset{
+    100% {
+        transform: translateY(327px);
+    }
+}
+
+.moon {
+    position: absolute;
+    background: transparent;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    box-shadow: -20px 10px white;
+    left: -50px;
+    opacity: 0;
+    animation: night 20s 35s forwards;
+}
+
+@keyframes
+
+night{
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 .hedgerow {
@@ -568,5 +644,143 @@ span {
     .labels {
         width: 15%;
         font-size: 14px;
+    }
+
+    .house-wrap {
+        width: 380px;
+    }
+
+    .right-side {
+        width: 100px;
+        height: 200px;
+        right: 55px;
+        top: 200px;
+    }
+
+    .left-side {
+        width: 100px;
+        height: 200px;
+        left: 56px;
+        top: 200px;
+    }
+
+    .middle {
+        width: 75px;
+        height: 195px;
+        top: 206px;
+        left: 155px;
+    }
+
+    .garage-left {
+        width: 85px;
+        height: 85px;
+        left: 7px;
+        top: 116px;
+    }
+
+    .upper-window-left {
+        width: 45px;
+        height: 55px;
+        left: 6px;
+        top: 10px;
+    }
+
+    .upper-window-left-right {
+        width: 45px;
+        height: 55px;
+        left: 46px;
+        top: 10px;
+    }
+
+    .upper-window-right {
+        width: 45px;
+        height: 55px;
+        left: 10px;
+        top: 10px;
+    }
+    
+    .upper-window-right-left {
+        width: 45px;
+        height: 55px;
+        left: 50px;
+        top: 10px;
+    }
+
+
+    .cladding-right {
+        width: 100px;
+        height: 100px;
+    }
+
+    .lower-window-right {
+        width: 80px;
+        height: 75px;
+        right: 10px;
+        top: 115px;
+    }
+
+    .window-middle {
+        width: 50px;
+        height: 50px;
+        left: 10px;
+    }
+
+    .door {
+        left: 10px;
+        top: 115px;
+    }
+
+    .right-roof {
+        width: 100px;
+        height: 90px;
+        top: 112px;
+        right: 54px;
+    }
+
+    .right-gutter {
+        width: 124px;
+        height: 110px;
+        top: -110px;
+        right: -13px;
+    }
+
+    .left-gutter {
+        width: 124px;
+        height: 110px;
+        top: -110px;
+        left: -13px;
+    }
+
+    .left-roof {
+        width: 100px;
+        height: 90px;
+        top: 112px;
+        left: 54px;
+    }
+    
+    .middle-roof {
+        top: 120px;
+        width: 170px;
+        height: 90px;
+    }
+
+
+    .hedgerow-right {
+        display: none;
+    }
+
+    .hedgerow {
+        display: none;
+    }
+
+    .sunshine {
+        z-index: 1;
+        right: 70px;
+    }
+
+    .moon {
+        left: 80px;
+        width: 70px;
+        height: 70px;
     }
 }
